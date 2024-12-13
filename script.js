@@ -232,10 +232,9 @@ randomBtn.addEventListener('click', () => {
 });
 backWelcome2.addEventListener('click', () => {
     // Clear the burger
-    let ingredients = randomBurger.querySelectorAll('.meat, .tomato, .cheese, .lettuce, .onion, .bread1');
+    let ingredients = randomBurger.querySelectorAll('.meat, .tomato, .cheese, .lettuce, .onion, .bread1, .bread2');
     ingredients.forEach(ing => randomBurger.removeChild(ing));
-    let container = document.querySelector('.container');
-    container.style.alignItems = "end";
+
     price = 0.5;
     priceTag2.textContent = `Total Price : $${price.toFixed(2)}`;
 
@@ -247,21 +246,23 @@ backWelcome2.addEventListener('click', () => {
 let randomBurger = document.getElementById('burger-random');
 let randomPrice = document.getElementById('price-tag2');
 
-let bread22 = document.createElement('div');
-bread22.className = "bread2";
-randomBurger.appendChild(bread22);
+
 
 let generateBtn = document.getElementById('generate');
 let priceTag2 = document.getElementById('price-tag2');
 
 generateBtn.addEventListener('click', () => {
+    
     // Clear the burger
-    let ingredients = randomBurger.querySelectorAll('.meat, .tomato, .cheese, .lettuce, .onion, .bread1');
+    let ingredients = randomBurger.querySelectorAll('.meat, .tomato, .cheese, .lettuce, .onion, .bread1, .bread2');
     ingredients.forEach(ing => randomBurger.removeChild(ing));
     let container = document.getElementById('random-container');
     container.style.alignItems = "end";
     price = 0.5;
-
+    // put the bottom bread
+    let bread22 = document.createElement('div');
+    bread22.className = "bread2";
+    randomBurger.appendChild(bread22);
     // Random number of ingredients
     let randomMeat = Math.floor(Math.random() * 3);
     let randomTomato = Math.floor(Math.random() * 4);

@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(-20px);
     background-color: white;
     border-radius: 20px;
     padding: 20px;
@@ -231,9 +232,9 @@
     border: none;
     outline: none; 
     cursor: pointer;
-    bottom: 15px;
+    bottom: 30px;
     left: 50%;
-    transform: translateX(-110%); 
+    transform: translateX(calc(-100% - 30px)); 
     transition-duration: 0.5s;
 }
 .finish-btn:hover{
@@ -250,9 +251,9 @@
     border: none;
     outline: none; 
     cursor: pointer;
-    bottom: 15px;
+    bottom: 30px;
     left: 50%;
-    transform: translateX(10%);
+    transform: translateX(30px);
     transition-duration: 0.5s;
     z-index: 10;
 }
@@ -310,14 +311,14 @@
     position: absolute;
     bottom: 60px;
     left: 50%;
-    transform: translateX(-180px);
+    transform: translateX(-190px);
     font-size: 18px;
     outline: none;
     border: none;
     border-radius: 15px;
     background-color: #E65C00;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
     transition-duration: 0.3s;
     cursor: pointer;
 }
@@ -334,5 +335,5 @@
     border-radius: 15px;
     background-color: black;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
 }
