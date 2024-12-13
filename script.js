@@ -1,17 +1,30 @@
 // Button to switch between pages
 const builderBtn = document.getElementById('builder');
-const backWelcome = document.getElementById('backWelcome');
+const randomBtn = document.getElementById('random');
+const backWelcome1 = document.getElementById('backWelcome1');
+const backWelcome2 = document.getElementById('backWelcome2');
+
 const maker_page = document.querySelector('.maker-page');
 const welcome_page = document.querySelector('.welcome-page');
 const random_page = document.querySelector('.random-page');
+
 builder.addEventListener('click', () => {
     maker_page.style.display = 'flex';
     welcome_page.style.display = 'none';
 });
-backWelcome.addEventListener('click', () => {
-    maker_page.style.display = 'none';
+backWelcome1.addEventListener('click', () => {
     welcome_page.style.display = 'block';
+    maker_page.style.display = 'none';
 });
+randomBtn.addEventListener('click', () => {
+    random_page.style.display = 'flex';
+    welcome_page.style.display = 'none';
+});
+backWelcome2.addEventListener('click', () => {
+    welcome_page.style.display = 'block';
+    random_page.style.display = 'none';
+});
+
 // Buttons to add or remove elements
 const addMeat = document.getElementById('addMeat');
 const minusMeat = document.getElementById('minusMeat');

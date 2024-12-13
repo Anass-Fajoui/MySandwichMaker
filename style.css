@@ -15,11 +15,12 @@
 .welcome-page h1{
     text-align: center;
     font-weight: 800;
-    padding: 30px;
+    padding: 40px;
+    margin-bottom: 30px;
     color: #E65100;
 }
 .cards{
-    height: calc(100vh - 137px);
+    
     display: flex; 
     justify-content: space-evenly;
     align-items: center; 
@@ -151,7 +152,6 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    z-index: 10;
 }
 
 .bread1{
@@ -259,7 +259,7 @@
 .reset-btn:hover{
     background-color:  black;
 }
-#backWelcome{
+.backWelcome{
     padding: 10px 20px;
     outline: none;
     border: none;
@@ -273,7 +273,63 @@
     top: 20px;
     left: 20px;
 }
-#backWelcome:hover{
+.backWelcome:hover{
     background-color: #E65C00;
 }
 /* ------------ Random Page ------------- */
+.random-page{
+    position: relative;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE0B2;
+}
+.random-page .container{
+    position: relative;
+    top: -30px;
+    width: 400px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: end;
+}
+.random-page .container .burger{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+#generate{
+    display: inline-block;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-180px);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: #E65C00;
+    color: white;
+    padding: 10px 20px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+#generate:hover{
+    background-color: black;
+}
+#price-tag2{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+
+}
