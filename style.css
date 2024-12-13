@@ -16,7 +16,7 @@
     text-align: center;
     font-weight: 800;
     padding: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #E65100;
 }
 .cards{
@@ -40,9 +40,9 @@
     transition-duration: 0.3s;
     transition-delay: 0.1s;
 }
-/* .welcome-page .card:hover{
+.welcome-page .card:hover{
     transform: scale(1.1);
-} */
+}
 
 .welcome-page .mybtn{
     padding: 10px 25px;
@@ -61,6 +61,7 @@
 }
 .welcome-page .cards .card h2{
     color: #E65100;
+    padding-top: 5px;
 }
 .welcome-page .cards .card img{
     width: 250px;
