@@ -6,7 +6,7 @@ function SandwichMaker() {
     const minusTomato = document.getElementById('minusTomato');
 
     const addLettuce = document.getElementById('addLettuce');
-    const minusLettuce = document.getElementById('minusLettuce');
+    const minusLettuce = document.getElementById('minusLettuce'); 
  
     const addCheese = document.getElementById('addCheese');
     const minusCheese = document.getElementById('minusCheese');
@@ -20,53 +20,96 @@ function SandwichMaker() {
 
     const Burger = document.getElementById('burger');
     Burger.appendChild(bread2);
+    // 280px max height
+    let height = 0;
 
     addMeat.addEventListener('click', () => {
-        const meat = document.createElement('div');
-        meat.className = "meat";
-        Burger.appendChild(meat);
+        height += 40;
+        if (height > 280) {
+            alert('You reached the limit of the burger, Please finish the burger');
+            height -= 40;
+            return;
+        }else{
+            const meat = document.createElement('div');
+            meat.className = "meat";
+            Burger.appendChild(meat);
+        }
+        
     });
     minusMeat.addEventListener('click', () => {
+        height -= 40;
         const meat = Burger.querySelector('.meat');
         Burger.removeChild(meat);
     });
 
     addTomato.addEventListener('click', () => {
+        height += 25;
+        if (height > 280) {
+            alert('You reached the limit of the burger, Please finish the burger');
+            height -= 25;
+            return;
+        }else{
         const tomato = document.createElement('div');
         tomato.className = "tomato";
         Burger.appendChild(tomato);
+        }
     });
     minusTomato.addEventListener('click', () => {
+        height -= 25;
         const tomato = Burger.querySelector('.tomato');
         Burger.removeChild(tomato);
     });
 
     addCheese.addEventListener('click', () => {
-        const cheese = document.createElement('div');
-        cheese.className = "cheese";
-        Burger.appendChild(cheese);
+        height += 10;
+        if (height > 280) {
+            alert('You reached the limit of the burger, Please finish the burger');
+            height -= 10;
+            return;
+        }else{
+            const cheese = document.createElement('div');
+            cheese.className = "cheese";
+            Burger.appendChild(cheese);
+        }
     });
     minusCheese.addEventListener('click', () => {
+        height -= 10;
         const cheese = Burger.querySelector('.cheese');
         Burger.removeChild(cheese);
     });
 
     addLettuce.addEventListener('click', () => {
-        const lettuce = document.createElement('div');
-        lettuce.className = "lettuce";
-        Burger.appendChild(lettuce);
+        height += 15;
+        if (height > 280) {
+            alert('You reached the limit of the burger, Please finish the burger');
+            height -= 15;
+            return;
+        }else {
+            const lettuce = document.createElement('div');
+            lettuce.className = "lettuce";
+            Burger.appendChild(lettuce);
+        }
     });
     minusLettuce.addEventListener('click', () => {
+        height -= 15;
         const lettuce = Burger.querySelector('.lettuce');
         Burger.removeChild(lettuce);
     });
 
     addOnion.addEventListener('click', () => {
-        const onion = document.createElement('div');
-        onion.className = "onion";
-        Burger.appendChild(onion);
+        height += 15;
+        if (height > 280) {
+            alert('You reached the limit of the burger, Please finish the burger');
+            height -= 15;
+            return;
+        } else{
+            const onion = document.createElement('div');
+            onion.className = "onion";
+            Burger.appendChild(onion);
+        }
     });
     minusOnion.addEventListener('click', () => {
+        height -= 15;
         const onion = Burger.querySelector('.onion');
         Burger.removeChild(onion);
     });
@@ -109,10 +152,6 @@ function SandwichMaker() {
                 button.style.opacity = '0.5';
             }
         });
-        const overlay = document.createElement('div');
-        overlay.className = "overlay";
-        document.body.appendChild(overlay);
-
     });
 
     const resetBtn = document.getElementById('reset-btn');
@@ -123,8 +162,7 @@ function SandwichMaker() {
         box2.style.alignItems = "end";
         
         const buttons = document.querySelectorAll('button');
-        const overlay = document.querySelector('.overlay');
-        document.body.removeChild(overlay);
+        height = 0;
         buttons.forEach(button => {
             if (button.id !== 'reset-btn') {
                 button.style.pointerEvents = 'auto';
