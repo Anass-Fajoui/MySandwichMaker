@@ -91,55 +91,62 @@
     background: #FFF8E1;
 }
 .box1, .box2{
-    width: 400px;
+    width: 400px; 
     height: 380px;
     /* padding: 30px; */
 }
 .box1{
     border-right: 4px solid #d35400;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .box1 h1{
+    margin-top: -5px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #d35400;
     font-weight: 700;
 }
-.box1 div button{
-    border: none;
-    padding: 5px 13px;
-    border-radius: 20px;
-}
-.box1 div{
-    margin: 10px auto;
+.box1 .card{
+    display: flex;
+    justify-content: center;
     width: fit-content;
+    border-radius: 20px;
+    margin: 10px auto;
+    align-items: stretch;
+    background-color: #FFE0B2;
+    /* box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2); */
 }
-.box1 div span{
-    display: inline-block;
-    width: 120px;
-    font-size: 20px;
-    margin-left: 10px;
-    text-align: center;
-}
-.box1 div button{
+.box1 .card button{
+    border: none;
+    padding: 10px 20px;
     background-color: #d35400;
-    font-size: 20px;
-    color: white;
-    transition-duration: 0.3s;
+    padding: 0px 13px;
     cursor: pointer;
+    color: white;
+    font-size: 18px;
 }
-.box1 div button:hover{
-    background-color: black;
+.box1 .card .plus{
+    border-radius: 0 20px 20px 0;
 }
+.box1 .card .minus{
+    border-radius: 20px 0 0 20px;
+}
+.box1 img{
+    height: 40px;
+    margin: 2px 50px;
+}
+
 .box1 .price-tag{
-    margin-top: 40px;
+    margin: 20px auto;
     font-size: 18px;
     font-weight: 700;
     background-color: black;
     padding: 10px 20px;
     border-radius: 20px;
+    width: fit-content;
     color: white;
 }
+
 .box2{
     display: flex;
     justify-content: center;
@@ -239,7 +246,7 @@
 }
 .finish-btn:hover{
     background-color:  black;
-}
+} 
 .reset-btn{
     position: absolute;
     font-size: 20px;

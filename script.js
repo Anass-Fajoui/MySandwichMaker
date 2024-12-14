@@ -251,7 +251,7 @@ let randomPrice = document.getElementById('price-tag2');
 let generateBtn = document.getElementById('generate');
 let priceTag2 = document.getElementById('price-tag2');
 
-generateBtn.addEventListener('click', () => {
+generateBtn.addEventListener('click', () => { 
     
     // Clear the burger
     let ingredients = randomBurger.querySelectorAll('.meat, .tomato, .cheese, .lettuce, .onion, .bread1, .bread2');
